@@ -1,0 +1,47 @@
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Hero title
+            </h1>
+            <h2 class="subtitle">
+                Hero subtitle
+            </h2>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="columns">
+        <div class="column is-8">
+            <div class="columns">
+                {{#each images}}
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="/images/{{uniqueID}}">
+                                <figure class="image is-4by3">
+                                    <img src="/public/upload/{{filename}}" alt="{{title}}">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                {{ description }}
+                            </div>
+                            <footer class="card-footer">
+                                <span class="card-footer-item">Save</span>
+                                <span class="card-footer-item">Edit</span>
+                                <span class="card-footer-item">Delete</span>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="column is-4">
+
+        </div>
+    </div>
+</div>
